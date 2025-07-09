@@ -24,12 +24,12 @@ public class Empleado implements Comparable<Empleado> {
     }
 
     @Override
-    public String toString() {
-        return "ID: " + id + ", Name: " + name + ", Position: " + position;
+    public int compareTo(Empleado otro) {
+        return Integer.compare(this.id, otro.id);
     }
 
     @Override
-    public int compareTo(Empleado otro) {
-        return Integer.compare(this.id, otro.id);
+    public String toString() {
+        return "Empleado{id=" + id + ", nombre='" + name + "', puesto='" + position + "'}";
     }
 }
